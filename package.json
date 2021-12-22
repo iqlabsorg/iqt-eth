@@ -1,7 +1,7 @@
 {
   "name": "iqt-eth",
   "version": "1.0.0",
-  "description": "IQ Token (Ethereum)",
+  "description": "IQ Protocol Token (Ethereum)",
   "main": "index.js",
   "scripts": {
     "test": "npx hardhat test"
