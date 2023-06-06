@@ -1,4 +1,3 @@
-require("@nomiclabs/hardhat-waffle");
 require("dotenv").config();
 const { ethers } = require("ethers");
 
@@ -7,7 +6,7 @@ const { ethers } = require("ethers");
  */
 module.exports = {
   solidity: {
-    version: "0.8.11",
+    version: "0.8.19",
     settings: {
       optimizer: {
         enabled: true,
@@ -18,7 +17,11 @@ module.exports = {
   networks: {
     ropsten: {
       url: `https://eth-ropsten.alchemyapi.io/v2/${process.env.ALCHEMY_API_KEY}`,
-      accounts: [`${ethers.Wallet.fromMnemonic(process.env.ROPSTEN_MNEMONIC).privateKey}`]
-    }
-  }
+      accounts: [
+        `${
+          ethers.Wallet.fromMnemonic(process.env.ROPSTEN_MNEMONIC).privateKey
+        }`,
+      ],
+    },
+  },
 };
